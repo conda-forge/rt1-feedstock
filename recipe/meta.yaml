@@ -1,6 +1,6 @@
 {% set name = "rt1" %}
-{% set version = "0.1.2" %}
-{% set sha256 = "f95c9acca34d22e04b5412687b856dfe1332405e0fc749c178f0e9f24ce84179" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "53a116b9971cabe5669d5757c9da46a55edfe201256710f8961575b6334d2a66" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -33,7 +33,7 @@ about:
   home: http://github.com/pygeo/rt1
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Bistatic first order radiative transfer model'
+  summary: Bistatic first order radiative transfer model
 
   description: |
     RT1 is a bistatic general first order radiative transfer models. More details in the documentation. 
