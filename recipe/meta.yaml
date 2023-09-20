@@ -1,6 +1,6 @@
 {% set name = "rt1" %}
-{% set version = "0.1.2" %}
-{% set sha256 = "f95c9acca34d22e04b5412687b856dfe1332405e0fc749c178f0e9f24ce84179" %}
+{% set version = "2.0" %}
+{% set sha256 = "e726c1a3b69da8809f07409e40f9510608749342edb2518954b96e076cab7640" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
